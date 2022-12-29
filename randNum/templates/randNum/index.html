@@ -1,0 +1,34 @@
+{% extends 'randNum/base.html' %}
+
+{% block title %}HOME{% endblock %}
+{% block content %}
+    <script
+  src="https://code.jquery.com/jquery-1.11.3.min.js"
+  integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+       function show()
+            {
+                $.ajax({
+                    url: '/',
+                    cache: false,
+                    success: function(html){
+                        $("#random-number").html(html);
+                    }
+                });
+            }
+
+            $(document).ready(function(){
+                show();
+            });
+    });
+
+</script>
+    <div class="row">
+        <div class="col-sm-12 mb-3">
+            <h4 id="random-number" class="text-center">{{ randNum }}</h4>
+        </div>
+    </div>
+{% endblock %}
