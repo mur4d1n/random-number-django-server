@@ -1,6 +1,6 @@
 {% extends 'randNum/base.html' %}
 
-{% block title %}HOME{% endblock %}
+{% block title %}Генератор случайных чисел{% endblock %}
 {% block content %}
     <script
   src="https://code.jquery.com/jquery-1.11.3.min.js"
@@ -30,5 +30,8 @@
         <div class="col-sm-12 mb-3">
             <h4 id="random-number" class="text-center">{{ randNum }}</h4>
         </div>
+        <br>
+        <p>Выполнен вход через Github как {{ user.username }}</p>
+        <a href="#">Выйти</a>
     </div>
 {% endblock %}
