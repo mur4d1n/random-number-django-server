@@ -8,7 +8,11 @@
   crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-    $( document ).ready(function() {
+    ws = new WebSocket('ws://localhost:8080/ws');
+    ws.addEventListener('message', function (event) {
+        $("#random-number").html(event.data);
+    });
+    /*$( document ).ready(function() {
        function show()
             {
                 $.ajax({
@@ -23,8 +27,7 @@
             $(document).ready(function(){
                 show();
             });
-    });
-
+    });*/
 </script>
     <div class="row">
         <div class="col-sm-12 mb-3">

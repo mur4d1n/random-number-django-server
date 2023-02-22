@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+
+import redis as redis
+
 from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +30,8 @@ SECRET_KEY = 'django-insecure-!p+*9&g&dn3k0z-i!obt2h8u#zp9$w)bor&2if!z%^=8pfas0p
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
 
 # Application definition
 
@@ -40,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'randNum.apps.RandnumConfig',
-    'social_django'
+    'social_django',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -75,6 +80,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djangoProject1.wsgi.application'
+
+ASGI_APPLICATION = 'djangoProject1.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [f"redis://{REDIS_HOST}:{REDIS_PORT}/3"]
+        },
+    },
+}
+
 
 
 # Database
