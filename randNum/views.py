@@ -37,10 +37,8 @@ def pageNotFound(request, exception):
 
 
 def update():
-    channel_layer = get_channel_layer()
     while True:
         sleep(5)
         rn = {'number': randint(0, 10000000000)}
         for key, value in rn.items():
             redis_instance.set(key, value)
-        channel_layer.group_send('default', {'text': redis_instance.get('number').decode()})
