@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 
 import redis as redis
+import os
 
 from django.urls import reverse_lazy
 
@@ -36,6 +37,7 @@ REDIS_PORT = 6379
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,6 +49,8 @@ INSTALLED_APPS = [
     'social_django',
     'channels'
 ]
+
+STATIC_DIRS = os.path.join(BASE_DIR, "static")
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -88,7 +92,7 @@ CHANNEL_LAYERS = {
         'CONFIG': {
             "hosts": [f"redis://{REDIS_HOST}:{REDIS_PORT}/3"]
         },
-    },
+    }
 }
 
 
