@@ -6,12 +6,12 @@
 
   1. Установить Redis
   1. Установить зависимости:
-  ```
-  pip install -r requirements.txt
-  ```
+```
+pip install -r requirements.txt
+```
   1. Запустить веб-сервер командой:
-  ```
-  python3 manage.py runserver
-  ```
+```
+python3 manage.py runserver
+```
   
 По умолчанию сервер доступен по адресу 127.0.0.1:8000
