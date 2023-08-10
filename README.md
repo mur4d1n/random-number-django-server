@@ -4,12 +4,25 @@
 
 Для локального деплоя необходимо:
 
-  1. Установить Redis
+  1. Установить Redis.
+
+  1. Запустить Redis:
+
+     ```
+     sudo service redis-server start
+     ```
   
   1. Установить зависимости:
 
      ```
      pip install -r requirements.txt
+     ```
+
+  1. Сгенерировать миграции и применить:
+
+     ```
+     python3 manage.py makemigrations
+     python3 manage.py migrate
      ```
      
   1. Запустить веб-сервер командой:
