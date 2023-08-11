@@ -14,7 +14,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://
 
 RUN apt-get update
 
-RUN apt-get install redis
+RUN apt-get install -y redis
 
 RUN service redis-server start
 
