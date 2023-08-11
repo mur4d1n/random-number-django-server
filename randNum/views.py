@@ -9,7 +9,7 @@ import redis
 
 flag = False
 
-redis_instance = redis.StrictRedis(host="127.0.0.1",
+redis_instance = redis.StrictRedis(host="0.0.0.0",
                                    port=6379, db=0)
 
 
