@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-!p+*9&g&dn3k0z-i!obt2h8u#zp9$w)bor&2if!z%^=8pfas0p
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'server-mur4d1n.amvera.io']
-REDIS_HOST = 'redis-mur4d1n.amvera.io'
+REDIS_HOST = '127.0.0.1'
 REDIS_PORT = 6379
 
 # Application definition
