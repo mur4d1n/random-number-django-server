@@ -5,5 +5,3 @@ asgiref~=3.6.0
 daphne
 social-auth-app-django
 channels-redis
-django-extensions
-Werkzeug
