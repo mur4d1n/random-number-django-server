@@ -22,7 +22,14 @@ RUN git clone https://github.com/mur4d1n/random-number-django-server.git
 
 RUN cd random-number-django-server
 
-RUN pip install -r requirements.txt
+RUN pip install Django~=4.1.4 \
+redis~=4.5.1 \
+channels~=4.0.0 \
+asgiref~=3.6.0 \
+daphne \
+social-auth-app-django \
+channels-redis
+
 
 RUN python3 manage.py makemigrations
 
