@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!p+*9&g&dn3k0z-i!obt2h8u#zp9$w)bor&2if!z%^=8pfas0p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'server-mur4d1n.amvera.io']
 REDIS_HOST = '127.0.0.1'
