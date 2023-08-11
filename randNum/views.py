@@ -9,7 +9,7 @@ import redis
 
 flag = False
 
-redis_instance = redis.StrictRedis(host="amvera-mur4d1n-run-redis",
+redis_instance = redis.StrictRedis(host="redis-mur4d1n.amvera.io",
                                    port=6379, db=0)
 
 
