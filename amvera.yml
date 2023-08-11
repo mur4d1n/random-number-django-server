@@ -5,5 +5,5 @@ meta:
     version: 3.10
 
 run:
-  command: apt-get update; apt-get install -y redis; service redis-server start; python3 manage.py makemigrations; python3 manage.py migrate; python3 manage.py runsslserver 0.0.0.0:8000
+  command: apt-get update; apt-get install -y redis; service redis-server start; python3 manage.py makemigrations; python3 manage.py migrate; python3 manage.py runserver 0.0.0.0:8000
   containerPort: 8000
