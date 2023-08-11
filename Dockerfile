@@ -20,17 +20,3 @@ RUN service redis-server start
 
 RUN git clone https://github.com/mur4d1n/random-number-django-server.git
 
-RUN pip install Django~=4.1.4 \
-redis~=4.5.1 \
-channels~=4.0.0 \
-asgiref~=3.6.0 \
-daphne \
-social-auth-app-django \
-channels-redis
-
-
-RUN python3 random-number-django-server/manage.py makemigrations
-
-RUN python3 random-number-django-server/manage.py migrate
-
-RUN python3 random-number-django-server/manage.py runserver
