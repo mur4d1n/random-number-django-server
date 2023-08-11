@@ -10,6 +10,6 @@ RUN apt install -y git
 
 RUN git clone https://github.com/mur4d1n/random-number-django-server.git
 
-RUN ls
+RUN cd random-number-django-server
 
-RUN pwd
+RUN ls
