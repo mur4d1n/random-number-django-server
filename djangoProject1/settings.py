@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'randNum.apps.RandnumConfig',
     'social_django',
-    'channels'
+    'channels',
+    'django_extensions'
 ]
 
 STATIC_DIRS = os.path.join(BASE_DIR, "static")
