@@ -6,7 +6,7 @@ LABEL description="aboba"
 
 RUN apt update
 
-RUN apt install -y python3 lsb-release curl gpg
+RUN apt install -y python3 lsb-release curl gpg pip
 
 RUN curl -fsSL https://packages.redis.io/gpg | gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 
