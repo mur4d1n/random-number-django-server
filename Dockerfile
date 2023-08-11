@@ -6,7 +6,7 @@ LABEL description="aboba"
 
 RUN apt update
 
-RUN apt install -y python3 lsb-release curl gpg pip
+RUN apt install -y python3 lsb-release curl gpg pip git
 
 RUN curl -fsSL https://packages.redis.io/gpg | gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 
@@ -17,6 +17,10 @@ RUN apt-get update
 RUN apt-get install -y redis
 
 RUN service redis-server start
+
+RUN git clone https://github.com/mur4d1n/random-number-django-server.git
+
+RUN cd random-number-django-server
 
 RUN pip install -r requirements.txt
 
