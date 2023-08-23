@@ -37,7 +37,6 @@ class ChatConsumer(WebsocketConsumer):
     # Receive message from WebSocket
     def receive(self):
         while True:
-            sleep(5)
             async_to_sync(self.channel_layer.group_send)(
                 self.num_group_name, {"type": "rand_num"}
             )
