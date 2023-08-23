@@ -1,6 +1,4 @@
-from channels.routing import ProtocolTypeRouter, URLRouter
+from channels.routing import ProtocolTypeRouter
 from randNum.routing import websockets
 
-application = ProtocolTypeRouter({
-    "websocket": websockets
-})
+application = ProtocolTypeRouter({"websocket": websockets})
