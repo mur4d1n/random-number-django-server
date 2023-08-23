@@ -1,8 +1,5 @@
-# chat/consumers.py
-import json
 import redis
 import threading
-from random import randint
 from time import sleep
 
 from asgiref.sync import async_to_sync

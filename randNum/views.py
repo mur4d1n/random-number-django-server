@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponseNotFound, JsonResponse
+from django.http import HttpResponseNotFound
 from django.contrib.auth.decorators import login_required
-from channels.layers import get_channel_layer
 from random import randint
 from time import sleep
 import threading
