@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
-from randNum.views import pageNotFound
+from randNum.views import page_not_found
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('randNum.urls'))
 ]
 
-handler404 = pageNotFound
+handler404 = page_not_found

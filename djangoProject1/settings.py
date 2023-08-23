@@ -1,6 +1,6 @@
-from pathlib import Path
-
 import os
+
+from pathlib import Path
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -11,7 +11,7 @@ SECRET_KEY = \
     'django-insecure-!p+*9&g&dn3k0z-i!obt2h8u#zp9$w)bor&2if!z%^=8pfas0p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -83,8 +83,6 @@ CHANNEL_LAYERS = {
     }
 }
 
-
-
 # Database
 
 DATABASES = {
@@ -93,7 +91,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 
@@ -121,7 +118,6 @@ TIME_ZONE = 'Europe/Moscow'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 

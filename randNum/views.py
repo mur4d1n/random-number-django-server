@@ -1,10 +1,13 @@
+import threading
+import redis
+
+from random import randint
+from time import sleep
+
 from django.shortcuts import render
 from django.http import HttpResponseNotFound
 from django.contrib.auth.decorators import login_required
-from random import randint
-from time import sleep
-import threading
-import redis
+
 
 flag = False
 
@@ -31,7 +34,7 @@ def login(request):
     return render(request, 'randNum/login.html')
 
 
-def pageNotFound(request, exception):
+def page_not_found(request, exception):
     return HttpResponseNotFound("Страница не найдена")
 
 

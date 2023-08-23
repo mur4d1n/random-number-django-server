@@ -1,6 +1,5 @@
 import redis
 import threading
-from time import sleep
 
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
@@ -34,13 +33,11 @@ class ChatConsumer(WebsocketConsumer):
             self.num_group_name, self.channel_name
         )
 
-    # Receive message from WebSocket
     def receive(self):
         while True:
             async_to_sync(self.channel_layer.group_send)(
                 self.num_group_name, {"type": "rand_num"}
             )
-
 
     def rand_num(self, event):
 
